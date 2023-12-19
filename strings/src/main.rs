@@ -2,6 +2,7 @@ use std::io;
 use std::fs;
 use std::io::Write;
 
+const OUTPUT_FILE_NAME: &str = "output.txt";
 
 fn get_user_input() -> String {
     let mut str_to_store = String::new();
@@ -31,5 +32,5 @@ fn main() {
     println!("Please enter a valid string:");
     let input = get_user_input();
     println!("You entered the value: {}", input);
-    write_to_file("output.txt", &input)
+    write_to_file(OUTPUT_FILE_NAME, &input)
 }
